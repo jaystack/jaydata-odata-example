@@ -1,0 +1,14 @@
+{
+  "name": "jaydata-odata-example",
+  "version": "1.0.0",
+  "description": "JayData OData example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JayStack",
+  "license": "ISC",
+  "dependencies": {
+    "jaydata": "^1.5.2"
+  }
+}
