@@ -166,7 +166,8 @@
             "computed": true
         },
         Title: {
-            "type": "Edm.String"
+            "type": "Edm.String",
+            "computed": true
         },
         Articles: {
             "type": "Array",
@@ -541,7 +542,7 @@
         if (ctxType) {
             var cfg = $data.typeSystem.extend({
                 name: "oData",
-                oDataServiceHost: "http://odatav4-demo.jaystack.com:9000/odata",
+                oDataServiceHost: "http://localhost:9000/odata",
                 withCredentials: false,
                 maxDataServiceVersion: "4.0"
             }, config);
@@ -551,29 +552,17 @@
         }
     };
 
+    exports["context"] = exports.factory();
+
     if (typeof Reflect !== "undefined" && typeof Reflect.defineMetadata === "function") {
         Reflect.defineMetadata("Org.OData.Core.V1.Computed", "true", types["JayData.Test.CommonItems.Entities.User"].prototype, "Id")
         Reflect.defineMetadata("Org.OData.Core.V1.Computed", "true", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Id")
-        Reflect.defineMetadata("UI.DisplayName", "Article identifier", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Id")
-        Reflect.defineMetadata("UI.ControlHint", "ReadOnly", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Id")
         Reflect.defineMetadata("Org.OData.Core.V1.Computed", "true", types["JayData.Test.CommonItems.Entities.UserProfile"].prototype, "Id")
         Reflect.defineMetadata("Org.OData.Core.V1.Computed", "true", types["JayData.Test.CommonItems.Entities.Category"].prototype, "Id")
-        Reflect.defineMetadata("UI.DisplayName", "Category identifier", types["JayData.Test.CommonItems.Entities.Category"].prototype, "Id")
-        Reflect.defineMetadata("UI.ControlHint", "ReadOnly", types["JayData.Test.CommonItems.Entities.Category"].prototype, "Id")
+        Reflect.defineMetadata("xxxx.ccccc", "true", types["JayData.Test.CommonItems.Entities.Category"].prototype, "Id")
+        Reflect.defineMetadata("Org.OData.Core.V1.Computed", "true", types["JayData.Test.CommonItems.Entities.Category"].prototype, "Title")
         Reflect.defineMetadata("Org.OData.Core.V1.Computed", "true", types["JayData.Test.CommonItems.Entities.Tag"].prototype, "Id")
         Reflect.defineMetadata("Org.OData.Core.V1.Computed", "true", types["JayData.Test.CommonItems.Entities.TagConnection"].prototype, "Id")
-        Reflect.defineMetadata("UI.DisplayName", "Categories", types["JayData.Test.CommonItems.Entities.Category"].prototype)
-        Reflect.defineMetadata("UI.DisplayName", "Category name", types["JayData.Test.CommonItems.Entities.Category"].prototype, "Title")
-        Reflect.defineMetadata("UI.ControlHint", "ShortText", types["JayData.Test.CommonItems.Entities.Category"].prototype, "Title")
-        Reflect.defineMetadata("UI.DisplayName", "Articles", types["JayData.Test.CommonItems.Entities.Article"].prototype)
-        Reflect.defineMetadata("UI.DisplayName", "Article title", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Title")
-        Reflect.defineMetadata("UI.ControlHint", "ShortText", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Title")
-        Reflect.defineMetadata("UI.DisplayName", "Article lead", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Lead")
-        Reflect.defineMetadata("UI.ControlHint", "ShortText", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Lead")
-        Reflect.defineMetadata("UI.DisplayName", "Article body", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Body")
-        Reflect.defineMetadata("UI.ControlHint", "LongText", types["JayData.Test.CommonItems.Entities.Article"].prototype, "Body")
-        Reflect.defineMetadata("UI.ControlHint", "Hidden", types["JayData.Test.CommonItems.Entities.Article"].prototype, "RowVersion")
-        Reflect.defineMetadata("UI.ControlHint", "ReadOnly", types["JayData.Test.CommonItems.Entities.Article"].prototype, "CreateDate")
         Reflect.defineMetadata("Org.OData.Core.V1.OptimisticConcurrency", ["RowVersion"], types["JayData.Test.CommonItems.Entities.Article"].prototype)
     }
 

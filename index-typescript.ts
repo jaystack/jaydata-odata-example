@@ -2,10 +2,20 @@
 /// <reference path="JayDataContext.d.ts" />
 import "jaydata-odatajs";
 import "jaydata/odata";
-import { type, factory, $data } from "./JayDataContext";
+import { type, factory, context, $data } from "./JayDataContext";
+
+// autocreated context instance
+context.onReady().then((ctx) => {
+    ctx.Articles
+        .include("Author")
+        .orderBy(it => it.Title)
+        .map(it => <any>{ Title: it.Title, Author: it.Author.LoginName })
+        .toArray()
+        .then(result => console.log("autocreated instance", result));
+});
 
 // creating entity context instance from type
-var ctx = new type({ name: "oData", oDataServiceHost: "http://odatav4-demo.jaystack.com:9000/odata" });
+var ctx = new type({ name: "oData", oDataServiceHost: "http://localhost:9000/odata" });
 ctx.onReady().then((ctx) => {
     // read
     ctx.Articles

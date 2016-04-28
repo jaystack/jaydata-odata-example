@@ -363,3 +363,4 @@ declare module Default {
 
 export var type: typeof Default.Container;
 export var factory:(config:any) => Default.Container;
+export var context: Default.Container
