@@ -7,6 +7,7 @@ define(["require", "exports", "jaydata/odata", "../JayDataContext"], function (r
         document.body.innerHTML += '<br>JayDataContext type: ' + JayDataContext_1.type;
         document.body.innerHTML += '<br>JayDataContext factory: ' + JayDataContext_1.factory;
         document.body.innerHTML += '<br>JayDataContext context type name: ' + JayDataContext_1.context;
+        require(['some_module'], function (some_module) { return some_module.some_func(); });
     }
     exports.getInfo = getInfo;
     function showArticles() {
