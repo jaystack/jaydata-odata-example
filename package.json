@@ -9,6 +9,6 @@
   "author": "JayStack",
   "license": "ISC",
   "dependencies": {
-    "jaydata": "^1.5.3"
+    "jaydata": "^1.5.4"
   }
 }
