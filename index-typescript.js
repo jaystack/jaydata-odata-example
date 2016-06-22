@@ -1,7 +1,6 @@
 "use strict";
 /// <reference path="typings/tsd.d.ts" />
 /// <reference path="JayDataContext.d.ts" />
-require("jaydata-odatajs");
 require("jaydata/odata");
 var JayDataContext_1 = require("./JayDataContext");
 // autocreated context instance

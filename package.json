@@ -9,6 +9,7 @@
   "author": "JayStack",
   "license": "ISC",
   "dependencies": {
-    "jaydata": "^1.5.4"
+    "jaydata": "^1.5.5",
+    "reflect-metadata": "^0.1.3"
   }
 }

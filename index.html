@@ -3,13 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>JayData OData example</title>
-    <script type="text/javascript" src="external/odatajs-4.0.0/odatajs-4.0.0.js"></script>
     <script type="text/javascript" src="node_modules/jaydata/public/jaydata.js" /></script>
     <script type="text/javascript" src="node_modules/jaydata/public/jaydataproviders/oDataProvider.js" /></script>
 </head>
 <body>
     <script>
-        $data.initService('http://odatav4-demo.jaystack.com:9000/odata').then(function(ctx){
+        $data.initService('http://localhost:9000/odata').then(function(ctx){
             ctx.Articles.include('Author').orderBy('it.Title').toArray().then(function(result){
                 var html = '<h1>Articles</h1><ul>';
                 for (var i = 0; i < result.length; i++){

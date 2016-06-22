@@ -1,6 +1,5 @@
 /// <reference path="typings/tsd.d.ts" />
 /// <reference path="JayDataContext.d.ts" />
-import "jaydata-odatajs";
 import "jaydata/odata";
 import { type, factory, context, $data } from "./JayDataContext";
 
